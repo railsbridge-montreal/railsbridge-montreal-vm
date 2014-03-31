@@ -1,4 +1,4 @@
-# RailsBridge Boston VM provision script (user part)
+# RailsBridge Montreal VM provision script (user part)
 
 # Copy files that should be owned by the user account
 rsync -rtv /vagrant/dotfiles/ /home/vagrant

@@ -1,6 +1,6 @@
 # RailsBridge Montreal Virtual Machine
 
-To workshop participants: this is the "behind the scenes" stuff that instructors use to create the virtual machine that you will use. You should install the virtual machine image file, not this code. Please follow [the instructions on the RailsBridge Montreal site](http://www.railsbridgeboston.org/vm_setup) to set up your virtual machine.
+To workshop participants: this is the "behind the scenes" stuff that instructors use to create the virtual machine that you will use. You should install the virtual machine image file, not this code. Please follow [the instructions on the RailsBridge Montreal site](http://docs.railsbridge-montreal.com/before-the-workshop/) to set up your virtual machine.
 
 To instructors and TAs: if you're interested in helping to maintain the VM, keep reading.
 
@@ -10,7 +10,7 @@ The base box is Ubuntu 12.04 LTS. The VirtualBox guest additions are updated fro
 
 The target Ruby version is 2.1.1, and Rails version is 4.0. We may need to explicitly specify these in the future.
 
-We use `chruby` to build/install Ruby, and invoke it in the user's `.bash_profile` to set their `PATH`. It provides a version of `gem` that defaults to user installs.
+We use `rbenv` to build/install Ruby, and invoke it in the user's `.bash_profile` to set their `PATH`. It provides a version of `gem` that defaults to user installs.
 
 ## Building a fresh image
 
@@ -44,10 +44,6 @@ Files are copied into the VM from these directories:
 * `binfiles` to `/usr/local/bin` (as root)
 * `etcfiles` to `/etc` (as root)
 * `dotfiles` to `/home/vagrant` (as the user)
-
-## Tests
-
-TODO: There should be some kind of automated test for the output (i.e. can you start the VM, log in, clone a test Rails app, and run it).
 
 ## Credits
 
