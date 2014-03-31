@@ -36,8 +36,8 @@ When you are ready to make the "gold master" version that we will ask students t
 
 To keep things simple and easy for everyone to modify, we use a shell script provisioner. There are two scripts:
 
-* `provision-root.sh` runs as root (installs packages/Ruby system-wide)
-* `provision-user.sh` runs as the `vagrant` user (installs gems to home directory)
+* `provision-root.sh` runs as root (installs packages and customizations)
+* `provision-user.sh` runs as the `vagrant` user (installs rbenv ruby and gems to home directory)
 
 Files are copied into the VM from these directories:
 
