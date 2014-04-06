@@ -1,6 +1,6 @@
 desc "Provision VM"
 task :up do
-  sh 'vagrant', 'up'
+  sh 'vagrant', 'up', '--provision'
 end
 
 desc "Build image file from VM"

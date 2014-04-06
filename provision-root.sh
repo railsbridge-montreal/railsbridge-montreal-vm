@@ -61,7 +61,9 @@ apt-get -y -q install git vim nodejs \
                           libssl-dev libyaml-dev \
                           autoconf libgdbm-dev libncurses5-dev \
                           automake libtool bison pkg-config libffi-dev \
-                          libxml2-dev libxslt-dev libxml2 libmagick++-dev
+                          libxml2-dev libxslt-dev libxml2 libmagick++-dev \
+                          sqlite3 libsqlite3-dev
+
 
 # Clean up APT cache and zero out disk to reduce image size
 apt-get -y autoremove

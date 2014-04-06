@@ -114,6 +114,9 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+### RSVP Railsbridge
+alias rspv='curl -s http://railsbridge-montreal.com/checks/script | ruby -'
+
 ### cd to workspace - students forget this, and don't see their files
 echo "Changing directory to the shared ~/workspace folder for your convenience."
 cd ~/workspace

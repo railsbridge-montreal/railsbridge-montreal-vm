@@ -17,17 +17,5 @@ source /home/vagrant/.bashrc
 /home/vagrant/.rbenv/bin/rbenv rehash
 /home/vagrant/.rbenv/bin/rbenv global 2.1.1
 
-# get Rails running
-echo "gem: --no-ri --no-rdoc" > /home/vagrant/.gemrc
-
-# FIXME: both gem install fails with:
-# ERROR:  While executing gem ... (Errno::EACCES)
-#     Permission denied - /var/lib/gems
-# I have to `vagrant ssh` in the machine and run `gem install` manually
-#
-gem install bundler
-/home/vagrant/.rbenv/bin/rbenv rehash
-gem install rails
-
 # Heroku Toolbelt
 sudo wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
