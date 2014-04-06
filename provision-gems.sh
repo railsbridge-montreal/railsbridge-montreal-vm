@@ -1,3 +1,6 @@
+# No gems docs
+echo "gem: --no-ri --no-rdoc" > /home/vagrant/.gemrc
+
 # FIXME: both gem install fails with:
 # ERROR:  While executing gem ... (Errno::EACCES)
 #     Permission denied - /var/lib/gems
