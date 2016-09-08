@@ -4,9 +4,11 @@
 rsync -rtv /vagrant/etcfiles/ /etc
 rsync -rtv /vagrant/binfiles/ /usr/local/bin
 
-# Add virtualbox PPA so we can upgrade guest additions to 4.2
-# This will also get any security updates not in the base image
-add-apt-repository -y ppa:debfx/virtualbox
+# Add virtualbox deb repo and keys so we can upgrade guest additions.
+# This will also get any security updates not in the base image.
+
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+echo deb http://download.virtualbox.org/virtualbox/debian xenial contrib > /etc/apt/sources.list.d/virtualbox.list
 apt-get update
 apt-get -y upgrade
 
@@ -33,7 +35,7 @@ echo '   ========================================'
 echo ''
 echo '   Welcome to the Railsbridge Montreal virtual machine!  The RailsBridge VM is a *computer within your computer*'
 echo '   running the Linux operating system.  Everything you need is installed, including:'
-echo '   Ruby 2.1, Rails 4.0, sqlite3, the heroku toolbelt, and git.'
+echo '   Ruby 2.2, Rails 4.2, sqlite3, the heroku toolbelt, and git.'
 echo ''
 echo '   When you start your Rails app, visit http://localhost:3000 in your web browser.'
 echo ''
