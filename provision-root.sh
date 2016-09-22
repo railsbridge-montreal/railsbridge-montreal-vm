@@ -70,5 +70,6 @@ apt-get -y -q install git vim nodejs \
 # Clean up APT cache and zero out disk to reduce image size
 apt-get -y autoremove
 apt-get clean
-dd if=/dev/zero of=/EMPTY bs=1M
-rm -f /EMPTY
+# Remove size optimisation as it currently seems to simply hang
+# dd if=/dev/zero of=/EMPTY bs=1M
+# rm -f /EMPTY
