@@ -8,6 +8,6 @@ Vagrant.configure('2') do |config|
   end
   config.vm.provision :shell, path: "provision-root.sh"
   config.vm.provision :shell, path: "provision-user.sh", privileged: false
-  config.vm.provision :shell, path: "provision-gems.sh", privileged: false
+  config.vm.provision :shell, path: "provision-gems.sh", privileged: true
   config.vm.network :forwarded_port, guest: 3000, host: 3000
 end
