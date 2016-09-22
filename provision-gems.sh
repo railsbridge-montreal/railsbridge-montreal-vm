@@ -1,5 +1,5 @@
 # No gems docs
-echo "gem: --no-ri --no-rdoc" > /home/vagrant/.gemrc
+echo "gem: --no-ri --no-rdoc" > /home/ubuntu/.gemrc
 
 # FIXME: both gem install fails with:
 # ERROR:  While executing gem ... (Errno::EACCES)
